@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    .bg-custom {
+      background-image: url('img/background.png'); 
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-custom min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class=" text-2xl font-bold mb-4 text-purple-600 flex items-center ">
+        <i class=" ms-2 fa-solid fa-splotch"></i>
+        FAQs
+      </h2>
+      <div class="faq-item mb-4">
+        <button class="text-lg font-semibold mb-2 flex items-center w-full" onclick="toggleAnswer(this)">
+          <span class="flex-1">What is Frontend Mentor, and how will it help me?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <p class="answer hidden">Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+      </div>
+      <div class="faq-item mb-4">
+        <button class="text-lg font-semibold mb-2 flex items-center w-full" onclick="toggleAnswer(this)">
+          <span class="flex-1">Is Frontend Mentor free?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <p class="answer hidden">Yes, Frontend Mentor offers free challenges, but there are also premium challenges that you can purchase.</p>
+      </div>
+      <div class="faq-item mb-4">
+        <button class="text-lg font-semibold mb-2 flex items-center w-full" onclick="toggleAnswer(this)">
+          <span class="flex-1">Can I use Frontend Mentor projects in my portfolio?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <p class="answer hidden">Yes, you can use Frontend Mentor projects in your portfolio to showcase your skills.</p>
+      </div>
+      <div class="faq-item mb-4">
+        <button class="text-lg font-semibold mb-2 flex items-center w-full" onclick="toggleAnswer(this)">
+          <span class="flex-1">How can I get help if I'm stuck on a challenge?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <p class="answer hidden">You can get help from the Frontend Mentor community in the Slack channel, or you can search for similar issues on the Frontend Mentor forum.</p>
+      </div>
+    </div>
+    <script>
+      function toggleAnswer(button) {
+        const answer = button.nextElementSibling;
+        answer.classList.toggle('hidden');
+        answer.classList.toggle('block');
+        const icon = button.querySelector('i');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+      }
+    </script>
+  </body>
+</html>
